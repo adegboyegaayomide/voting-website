@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-icon" onclick="toggleNavbar()">☰</div>
+        <div class="navbar-links">
+            <a href="#">Top Ten Voters</a>
+            <a href="#">Help</a>
+            <a href="#">Feedback</a>
+            <span class="cancel-icon" onclick="toggleNavbar()">✖</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search contestants...">
+        </div>
+        <div class="toggle-dark-mode" onclick="toggleDarkMode()">🌓</div>
+    </nav>
+
+    <!-- Contestants Section -->
+    <div class="contestants-container">
+        <!-- Generate 50 contestant cards -->
+        <div class="contestant-card" id="contestant-1">
+            <img src="contestant1.jpg" alt="Contestant 1" class="contestant-image">
+            <h3>Contestant 1</h3>
+            <p>ID: 001</p>
+            <a href="https://paystack.com/pay/mtuls7waa5">
+            <button class="vote-button" onclick="showVote(1)">Vote</button>
+            </a>
+        </div>
+        <div class="contestant-card" id="contestant-2">
+            <img src="contestant2.jpg" alt="Contestant 2" class="contestant-image">
+            <h3>Contestant 2</h3>
+            <p>ID: 002</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <!-- Repeat this block for all contestants up to Contestant 50 -->
+    </div>
+</body>
+</html>
